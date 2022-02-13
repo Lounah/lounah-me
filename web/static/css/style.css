@@ -1,0 +1,88 @@
+
+.theme-light {
+    --color-primary: #ffffff;
+    --text-color-primary: #000000;
+    --text-color-secondary: purple;
+    --text-color-accent: blue;
+}
+
+.theme-dark {
+    --color-primary: #121212;
+    --text-color-primary: #aaaaaa;
+    --text-color-secondary: #aaaaaa;
+    --text-color-accent: #e7e7e7;
+}
+
+body {
+    background-color: var(--color-primary);
+    color: var(--text-color-primary);
+}
+
+.content {
+  margin: auto;
+  width: 50%;
+  overflow-y: scroll;
+}
+
+.header {
+    padding-top: 10px;
+    top: 0;
+    padding-bottom: 70px;
+}
+
+.header h1 {
+   float: left;
+   font-size: 17px;
+}
+
+.header-controls h2 {
+   float: right;
+   font-size: 15px;
+}
+
+.content-block {
+    padding-top: 40px;
+    line-height: 1.8;
+}
+
+.content-block h1 {
+    font-size: 17px;
+}
+
+.content-block h2 {
+    font-size: 16px;
+}
+
+.footer h2 {
+    transform: translate(-50%, -50%);
+    top: 90%;
+    left: 50%;
+    position: absolute;
+    line-height: 1.5;
+    font-size: 17px;
+}
+
+a {
+	cursor: pointer;
+	color: var(--text-color-accent);
+	text-decoration: none;
+	border-bottom: 1px solid blue
+}
+
+a:visited {
+	color: var(--text-color-secondary);
+	border-bottom: 1px solid purple
+}
+
+a:hover {
+	background-color: blue;
+	color: #fff
+}
+
+a:hover:visited {
+	background-color: var(--text-color-secondary);
+}
+
+.span.date {
+    color: #808080;
+}
