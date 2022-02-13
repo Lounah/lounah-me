@@ -21,7 +21,6 @@ body {
 .content {
   margin: auto;
   width: 50%;
-  overflow-y: scroll;
 }
 
 .header {
@@ -55,8 +54,9 @@ body {
 
 .footer h2 {
     transform: translate(-50%, -50%);
-    top: 90%;
     left: 50%;
+    padding-top: 200px;
+    padding-bottom: 50px;
     position: absolute;
     line-height: 1.5;
     font-size: 17px;
