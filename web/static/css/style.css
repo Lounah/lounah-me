@@ -1,4 +1,10 @@
 
+:root {
+    --small: 17px;
+    --medium: 18px;
+    --normal: 19px;
+}
+
 .theme-light {
     --color-primary: #ffffff;
     --text-color-primary: #000000;
@@ -24,8 +30,8 @@ body {
 }
 
 .header {
-    padding-top: 10px;
     top: 0;
+    padding-top: 10px;
     padding-bottom: 70px;
 }
 
@@ -88,8 +94,20 @@ a:hover:visited {
 }
 
 @media screen and (min-width: 1000px) {
+    :root {
+        --small: 15px;
+        --medium: 16px;
+        --normal: 17px;
+    }
+
     .content {
         margin: auto;
         width: 50%;
     }
+
+    .header h1 {
+        float: left;
+        font-size: 17px;
+    }
 }
+
