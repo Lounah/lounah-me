@@ -19,8 +19,15 @@ body {
 }
 
 .content {
-  margin: auto;
-  width: 50%;
+   margin: auto;
+   width: 90%;
+}
+
+@media screen and (min-width: 800px) {
+    .content {
+        margin: auto;
+        width: 50%;
+    }
 }
 
 .header {
