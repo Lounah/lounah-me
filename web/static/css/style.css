@@ -1,8 +1,8 @@
 
 :root {
-    --small: 17px;
-    --medium: 18px;
-    --normal: 19px;
+    --small: 18px;
+    --medium: 19px;
+    --normal: 20px;
 }
 
 .theme-light {
@@ -37,12 +37,12 @@ body {
 
 .header h1 {
    float: left;
-   font-size: 17px;
+   font-size: var(--normal);
 }
 
 .header-controls h2 {
    float: right;
-   font-size: 15px;
+   font-size: var(--small);
 }
 
 .content-block {
@@ -51,11 +51,11 @@ body {
 }
 
 .content-block h1 {
-    font-size: 17px;
+    font-size: var(--normal);
 }
 
 .content-block h2 {
-    font-size: 16px;
+    font-size: var(--medium);
 }
 
 .footer h2 {
@@ -65,7 +65,7 @@ body {
     padding-bottom: 50px;
     position: absolute;
     line-height: 1.5;
-    font-size: 17px;
+    font-size: var(--normal);
 }
 
 a {
@@ -107,7 +107,7 @@ a:hover:visited {
 
     .header h1 {
         float: left;
-        font-size: 17px;
+        font-size: var(--normal);
     }
 }
 
