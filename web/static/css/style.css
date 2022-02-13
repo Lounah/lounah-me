@@ -23,13 +23,6 @@ body {
    width: 90%;
 }
 
-@media screen and (min-width: 800px) {
-    .content {
-        margin: auto;
-        width: 50%;
-    }
-}
-
 .header {
     padding-top: 10px;
     top: 0;
@@ -92,4 +85,11 @@ a:hover:visited {
 
 .span.date {
     color: #808080;
+}
+
+@media screen and (min-width: 1000px) {
+    .content {
+        margin: auto;
+        width: 50%;
+    }
 }
