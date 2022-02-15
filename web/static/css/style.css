@@ -46,11 +46,11 @@ body {
 }
 
 .content-block {
-    padding-top: 40px;
-    line-height: 1.8;
 }
 
 .content-block h1 {
+    padding-top: 40px;
+    line-height: 1.8;
     font-size: var(--font-size-normal);
 }
 
@@ -103,11 +103,6 @@ a:hover:visited {
     .content {
         margin: auto;
         width: 50%;
-    }
-
-    .header h1 {
-        float: left;
-        font-size: var(--font-size-normal);
     }
 }
 

@@ -25,9 +25,7 @@
         <h2>- <a href="mailto:lounah@yandex.ru">Как Java 8 поддерживается в Android</a> <span class="span date">2021-07-05</span>
         </h2>
         <h3>&nbsp;&nbsp;<a href="mailto:lounah@yandex.ru">Show more >> </a></h3>
-    </div>
 
-    <div class="content-block">
         <h1>## Podcasts</h1>
         <h2>- <a href="mailto:lounah@yandex.ru">Как Java 8 поддерживается в Android</a> <span class="span date">2022-02-10</span>
         </h2>
@@ -36,9 +34,7 @@
         <h2>- <a href="mailto:lounah@yandex.ru">Как Java 8 поддерживается в Android</a> <span class="span date">2021-07-05</span>
         </h2>
         <h3>&nbsp;&nbsp;<a href="mailto:lounah@yandex.ru">Show more >> </a></h3>
-    </div>
 
-    <div class="content-block">
         <h1>## Talks</h1>
         <h2>- <a href="mailto:lounah@yandex.ru">Как Java 8 поддерживается в Android</a> <span class="span date">2022-02-10</span>
         </h2>
@@ -49,11 +45,15 @@
         <h3>&nbsp;&nbsp;<a href="mailto:lounah@yandex.ru">Show more >> </a></h3>
 
 
-    <div class="footer">
-        <h2><a href="https://github.com/Lounah">Github</a> / <a href="https://t.me/lounvhx">Telegram</a> / <a
-                href="https://twitter.com/lounvhx">Twitter</a></h2>
+        <div class="footer">
+            <h2>
+                {% for key in meta %}
+                <a href="{{ meta[key] }}">{{ key }}</a>
+                {% endfor %}
+            </h2>
+        </div>
     </div>
-    </div>
+
 </div>
 </body>
 
