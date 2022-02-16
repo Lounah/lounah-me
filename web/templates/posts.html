@@ -21,7 +21,7 @@
     <div class="content-block">
         {% for publication in content %}
             <h1>## {{ publication.title }}</h1>
-            {{ publication.content.overview()|safe }}
+            {{ publication.content.html()|safe }}
             <h3><a href="{{ publication.url() }}">Read more >> </a></h3>
         {% endfor %}
     </div>
