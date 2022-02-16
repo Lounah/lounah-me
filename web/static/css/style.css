@@ -8,15 +8,22 @@
 .theme-light {
     --color-primary: #ffffff;
     --text-color-primary: #000000;
-    --text-color-secondary: purple;
+    --text-color-secondary: #aaaaaa;
+    --text-color-url: purple;
     --text-color-accent: blue;
 }
 
 .theme-dark {
     --color-primary: #121212;
     --text-color-primary: #aaaaaa;
-    --text-color-secondary: #aaaaaa;
+    --text-color-secondary: #e7e7e7;
+    --text-color-url: #aaaaaa;
     --text-color-accent: #e7e7e7;
+}
+
+img {
+   margin: auto;
+   width: 90%;
 }
 
 body {
@@ -45,9 +52,6 @@ body {
    font-size: var(--font-size-small);
 }
 
-.content-block {
-}
-
 .content-block h1 {
     padding-top: 40px;
     line-height: 1.8;
@@ -56,6 +60,7 @@ body {
 
 .content-block h2 {
     font-size: var(--font-size-medium);
+    color: var(--text-color-secondary);
 }
 
 .footer h2 {
@@ -76,7 +81,7 @@ a {
 }
 
 a:visited {
-	color: var(--text-color-secondary);
+	color: var(--text-color-url);
 	border-bottom: 1px solid purple
 }
 
@@ -86,12 +91,18 @@ a:hover {
 }
 
 a:hover:visited {
-	background-color: var(--text-color-secondary);
+	background-color: var(--text-color-url);
 }
 
 .span.date {
     color: #808080;
 }
+
+.header a:visited {
+	color: white;
+	border-bottom: 1px solid purple
+}
+
 
 @media screen and (min-width: 1000px) {
     :root {
