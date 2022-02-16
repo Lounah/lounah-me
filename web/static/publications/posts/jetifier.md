@@ -1,3 +1,5 @@
+# \# Отключаем Jetifier и ускоряем сборку
+
 ![Tux, the Linux mascot](https://habrastorage.org/r/w1560/webt/ho/ap/qe/hoapqe-nhkwts3ekeettjbuiao8.png)
 
 Привет, Хабр!
@@ -8,13 +10,15 @@
 
 В этой статье я расскажу и покажу, как мы ускорили билд, отключив Jetifier.
 
+[overview]: <>
 # Table of Contents
-1. [Example](#example)
+1. [Example](#preambula)
 2. [Example2](#example2)
 3. [Third Example](#third-example)
 4. [Fourth Example](#fourth-examplehttpwwwfourthexamplecom)
 
-# Преамбула
+<a name="preambula"></a>
+# \#\# Преамбула
 
 Jetifier был представлен еще в далеком 2018 году вместе с AndroidX  – классной заменой support библиотекам, компоненты которой могут поддерживаться и обновляться независимо друг от друга.
 

@@ -23,7 +23,8 @@
 
 img {
    margin: auto;
-   width: 90%;
+   width: 100%;
+   display: block;
 }
 
 body {
@@ -67,6 +68,7 @@ body {
     font-size: var(--font-size-small);
     color: var(--text-color-secondary);
     margin: 0 0 1.75rem;
+    line-height: 1.6;
 }
 
 .footer h2 {

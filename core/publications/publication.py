@@ -1,3 +1,4 @@
+import re
 from datetime import date
 from dataclasses import dataclass
 from enum import Enum
@@ -8,30 +9,39 @@ import markdown as markdown
 class PublicationType(Enum):
     POST = 'Posts'
     PODCAST = 'Podcasts'
-    SPEECH = 'Talks'
+    TALK = 'Talks'
 
     def __str__(self):
         return str(self.value)
 
 
-@dataclass
 class PublicationContent:
-    text: str
+    def __init__(self, text):
+        self.text = text
+        self.html = markdown.markdown(text)
 
     def overview(self):
-        return markdown.markdown(self.text[:450])
+        content = self.text.split('[overview]: <>')[0]
+        return markdown.markdown(content)
 
-    def html(self):
-        return markdown.markdown(self.text)
+    def title(self):
+        """
+        Extract publication title from the very first <h1> tag;
+        Also remove '#' characters.
+        :return: publication title
+        """
+        pattern = "<h1>(.*?)</h1>"
+        title = re.search(pattern, self.html).group(1)
+        return title.replace("#", "")
 
 
 @dataclass
 class Publication:
-    id: int
+    id: str
     title: str
     date: date
     content: PublicationContent
     type: PublicationType
 
     def url(self):
-        return f"https://lounah.me/blog/{self.id}"
+        return f"/blog/{self.id}"

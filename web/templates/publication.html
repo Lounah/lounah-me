@@ -6,25 +6,19 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>lounah's blog</title>
+    <title>{{ publication.title }}</title>
 </head>
 
 <body>
 <div class="content">
     <div class="header">
-        <h1># lounah.me | <a href="mailto:lounah@yandex.ru">lounah@yandex.ru</a></h1>
+        <h1># <a href="/">lounah.me</a> | <a href="mailto:lounah@yandex.ru">lounah@yandex.ru</a></h1>
         <div class="header-controls">
             <h2><a href="/dark">Dark</a> / <a href="/light">Light</a></h2>
         </div>
     </div>
     <div class="content-block">
-        {% for group, publications in content %}
-            <h1>## {{ group }}</h1>
-            {% for publication in publications %}
-                <h2>- <a href="{{ publication.url() }}">{{ publication.title }}</a> <span class="span date">{{ publication.date.strftime("%Y-%d-%m") }}</span></h2>
-            {% endfor %}
-            <h3>&nbsp;&nbsp;<a href="/{{ group.value.lower() }}">Show more >> </a></h3>
-        {% endfor %}
+        {{ publication.content.html | safe }}
     </div>
 </div>
 </body>

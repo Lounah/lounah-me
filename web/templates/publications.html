@@ -12,7 +12,7 @@
 <body>
 <div class="content">
     <div class="header">
-        <h1># <a href="/">lounah.me</a> > blog</h1>
+        <h1># <a href="/">lounah.me</a> | <a href="mailto:lounah@yandex.ru">lounah@yandex.ru</a></h1>
         <div class="header-controls">
             <h2><a href="/dark">Dark</a> / <a href="/light">Light</a></h2>
         </div>
@@ -20,16 +20,13 @@
 
     <div class="content-block">
         {% for publication in content %}
-            <h1>## {{ publication.title }}</h1>
-            {{ publication.content.html()|safe }}
+            {{ publication.content.overview() | safe }}
             <h3><a href="{{ publication.url() }}">Read more >> </a></h3>
         {% endfor %}
     </div>
 </div>
 </body>
-
 <div class="footer">
-    <h2><a href="https://github.com/Lounah">Github</a> / <a href="https://t.me/lounvhx">Telegram</a> / <a href="https://twitter.com/lounvhx">Twitter</a> </h2>
+    <h2><a href="https://github.com/Lounah" target="_blank">Github</a> / <a href="https://t.me/lounvhx" target="_blank">Telegram</a> / <a href="https://twitter.com/lounvhx" target="_blank">Twitter</a> </h2>
 </div>
-
 </html>
