@@ -1,0 +1,23 @@
+[universal]
+dark_theme = "Dark"
+light_theme = "Light"
+
+[ru]
+posts = "Посты"
+podcasts = "Подкасты"
+talks = "Выступления"
+read_more = "Читать больше"
+show_more = "Показать еще"
+switch_language = "This site is also available on"
+other_language = "English"
+other_language_code = "en"
+
+[en]
+posts = "Posts"
+podcasts = "Podcasts"
+talks = "Talks"
+read_more = "Read more"
+show_more = "Show more"
+switch_language = "Сайт также доступен на"
+other_language = "русском"
+other_language_code = "ru"

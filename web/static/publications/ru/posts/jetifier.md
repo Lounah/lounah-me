@@ -1,6 +1,6 @@
 # \# Отключаем Jetifier и ускоряем сборку
 
-![Tux, the Linux mascot](https://habrastorage.org/r/w1560/webt/ho/ap/qe/hoapqe-nhkwts3ekeettjbuiao8.png)
+![header](../../../resources/images/en/header.png)
 
 Привет, Хабр!
 

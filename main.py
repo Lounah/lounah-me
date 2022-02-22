@@ -1,9 +1,14 @@
-from flask import Flask, render_template, session
+from flask import Flask, url_for, request
 from werkzeug.utils import redirect
 
-from core.publications.publication import PublicationType
-from core.publications.publications_source import StaticPublicationSource
-from core.publications.publications_repository import PublicationsRepository
+from sources.application_state import ApplicationState
+from sources.pages.main_page import MainPage
+from sources.pages.publication_page import PublicationPage
+from sources.pages.publications_page import PostsPage, PodcastsPage, TalksPage
+from sources.publications.publications_source import StaticPublicationSource
+from sources.resources.lang import Lang
+from sources.resources.publications import Publications
+from sources.resources.strings import Strings
 
 app = Flask(
     __name__,
@@ -12,53 +17,37 @@ app = Flask(
     template_folder='web/templates'
 )
 
-app.config['SESSION_TYPE'] = 'memcached'
-app.config['SECRET_KEY'] = 'some-secret-key'
-
-source = StaticPublicationSource('web/static/publications')
-store = PublicationsRepository(source)
+strings = Strings('web/static/resources/strings.toml')
+publications = Publications({
+    Lang.RU: StaticPublicationSource('web/static/publications/ru'),
+    Lang.EN: StaticPublicationSource('web/static/publications/en')
+})
+app_state = ApplicationState(strings, publications, Lang.EN)
 
 
 @app.route('/')
 def index():
-    theme = session.get('theme', 'theme-light')
-    return render_template("index.html", theme=theme, content=store.get_all_grouped())
+    return MainPage(app_state).create()
 
 
 @app.route('/posts')
 def posts():
-    theme = session.get('theme', 'theme-light')
-    return render_template("publications.html", theme=theme, content=store.get_all_by_type(PublicationType.POST))
+    return PostsPage(app_state).create()
 
 
 @app.route('/podcasts')
 def podcasts():
-    theme = session.get('theme', 'theme-light')
-    return render_template("publications.html", theme=theme, content=store.get_all_by_type(PublicationType.PODCAST))
+    return PodcastsPage(app_state).create()
 
 
 @app.route('/talks')
 def talks():
-    theme = session.get('theme', 'theme-light')
-    return render_template("publications.html", theme=theme, content=store.get_all_by_type(PublicationType.TALK))
+    return TalksPage(app_state).create()
 
 
 @app.route('/blog/<id>')
 def post(id):
-    theme = session.get('theme', 'theme-light')
-    return render_template("publication.html", theme=theme, publication=store.get_by_id(id))
-
-
-@app.route('/dark')
-def dark():
-    session['theme'] = 'theme-dark'
-    return redirect('/')
-
-
-@app.route('/light')
-def light():
-    session['theme'] = 'theme-light'
-    return redirect('/')
+    return PublicationPage(id, app_state).create()
 
 
 if __name__ == "__main__":

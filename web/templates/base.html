@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang="en" class="theme-light">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hack/0.8.1/hack.css"/>
+<link rel="stylesheet" href="/css/style.css">
+<script type=text/javascript src="{{url_for('static', filename='js/index.js') }}"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+
+<body>
+<div class="content">
+    <div class="header">
+        <h1># lounah.me | <a href="mailto:lounah@yandex.ru">lounah@yandex.ru</a></h1>
+        <div class="header-controls">
+            <h2><a role="button" onclick="setDarkTheme()">Dark</a> / <a role="button" onclick="setLightTheme()">Light</a></h2>
+        </div>
+    </div>
+
+    <div class="content-block">{% block content %}{% endblock %}</div>
+
+</div>
+</body>
+
+<div class="footer">
+    <h2><a href="https://github.com/Lounah" target="_blank">Github</a> / <a href="https://t.me/lounvhx" target="_blank">Telegram</a> / <a href="https://twitter.com/lounvhx" target="_blank">Twitter</a></h2>
+    <h3>{{strings['switch_language']}} <a type="button" onclick="updateLanguage('{{strings['other_language_code']}}')">{{strings['other_language']}}</a></h3>
+</div>
+
+</html>

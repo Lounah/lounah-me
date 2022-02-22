@@ -11,6 +11,9 @@ class PublicationType(Enum):
     PODCAST = 'Podcasts'
     TALK = 'Talks'
 
+    def translated(self, strings: dict[str, str]) -> str:
+        return strings[self.value.lower()]
+
     def __str__(self):
         return str(self.value)
 

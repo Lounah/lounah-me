@@ -1,28 +1,5 @@
-<!DOCTYPE html>
-
-<html lang="en" class="{{ theme }}">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hack/0.8.1/hack.css"/>
-<link rel="stylesheet" href="/css/style.css">
-
-<head>
-    <meta charset="UTF-8">
-    <title>{{ publication.title }}</title>
-</head>
-
-<body>
-<div class="content">
-    <div class="header">
-        <h1># <a href="/">lounah.me</a> | <a href="mailto:lounah@yandex.ru">lounah@yandex.ru</a></h1>
-        <div class="header-controls">
-            <h2><a href="/dark">Dark</a> / <a href="/light">Light</a></h2>
-        </div>
-    </div>
-    <div class="content-block">
-        {{ publication.content.html | safe }}
-    </div>
-</div>
-</body>
-<div class="footer">
-    <h2><a href="https://github.com/Lounah" target="_blank">Github</a> / <a href="https://t.me/lounvhx" target="_blank">Telegram</a> / <a href="https://twitter.com/lounvhx" target="_blank">Twitter</a> </h2>
-</div>
-</html>
+{% extends "base.html" %}
+{% block title %}{{ publication.title }}{% endblock %}
+{% block content %}
+    {{ publication.content.html | safe }}
+{% endblock %}

@@ -3,7 +3,7 @@ import datetime
 import os
 from pathlib import Path
 
-from core.publications.publication import Publication, PublicationType, PublicationContent
+from sources.publications.publication import Publication, PublicationType, PublicationContent
 
 
 class PublicationsSource:
