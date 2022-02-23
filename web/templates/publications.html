@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block title %}Publications{% endblock %}
+{% block header %}cd {{type.value}}{% endblock %}
 {% block content %}
     {% for publication in content %}
         {{ publication.content.overview() | safe }}

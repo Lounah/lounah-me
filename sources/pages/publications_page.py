@@ -9,7 +9,10 @@ class PostsPage(WebPage):
         super().__init__("publications.html", state)
 
     def get_args(self) -> dict[str, Any]:
-        return {"content": self._get_posts()}
+        return {
+            "content": self._get_posts(),
+            "type": PublicationType.POST
+        }
 
     def _get_posts(self):
         return list(filter(lambda publication: publication.type == PublicationType.POST, self._state.publications()))
@@ -20,7 +23,10 @@ class PodcastsPage(WebPage):
         super().__init__("publications.html", state)
 
     def get_args(self) -> dict[str, Any]:
-        return {"content": self._get_podcasts()}
+        return {
+            "content": self._get_podcasts(),
+            "type": PublicationType.PODCAST
+        }
 
     def _get_podcasts(self):
         return list(filter(lambda publication: publication.type == PublicationType.PODCAST, self._state.publications()))
@@ -31,7 +37,10 @@ class TalksPage(WebPage):
         super().__init__("publications.html", state)
 
     def get_args(self) -> dict[str, Any]:
-        return {"content": self._get_talks()}
+        return {
+            "content": self._get_talks(),
+            "type": PublicationType.TALK
+        }
 
     def _get_talks(self):
         return list(filter(lambda publication: publication.type == PublicationType.TALK, self._state.publications()))

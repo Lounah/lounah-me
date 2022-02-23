@@ -2,10 +2,10 @@
 {% block title %}lounah's blog{% endblock %}
 {% block content %}
     {% for group, publications in all_publications %}
-        <h1>## {{ group.translated(strings) }}</h1>
+        <h2>## {{ group.translated(strings) }}</h2>
         {% for publication in publications %}
-            <h2>- <a href="{{ publication.url() }}">{{ publication.title }}</a> <span class="span date">{{ publication.date.strftime("%Y-%d-%m") }}</span></h2>
+            <h3>- <a href="{{ publication.url() }}">{{ publication.title }}</a> <span class="span date">{{ publication.date.strftime("%Y-%m-%d") }}</span></h3>
         {% endfor %}
-        <h3>&nbsp;&nbsp;<a href="/{{ group.value.lower() }}">{{strings['show_more']}} >> </a></h3>
+        <p>&nbsp;&nbsp;<a href="/{{ group.value.lower() }}">{{strings['show_more']}} >> </a></p>
     {% endfor %}
 {% endblock %}
