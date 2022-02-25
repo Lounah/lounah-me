@@ -47,4 +47,4 @@ class Publication:
     type: PublicationType
 
     def url(self):
-        return f"/blog/{self.id}"
+        return f"/publications/{self.id}"

@@ -7,23 +7,32 @@
 
 .theme-light {
 	--color-primary: #fff;
+	--color-primary-dark: #808080;
+	--color-accent: blue;
+	--color-secondary: purple;
 	--text-color-primary: #000;
 	--text-color-secondary: #aaa;
 	--text-color-url: purple;
 	--text-color-accent: blue;
+	--text-color-secondary: #000;
 }
 
 .theme-dark {
 	--color-primary: #121212;
+	--color-primary-dark: #808080;
+	--color-accent: blue;
+	--color-secondary: purple;
 	--text-color-primary: #aaa;
 	--text-color-secondary: #e7e7e7;
 	--text-color-url: #aaa;
 	--text-color-accent: #e7e7e7;
+	--text-color-secondary: #000;
 }
 
 h1 { font-size: var(--font-size-h1); }
 h2 { font-size: var(--font-size-h2); }
 h3 { font-size: var(--font-size-h3); }
+h4 { font-size: var(--font-size-h4); }
 
 img {
 	margin: auto;
@@ -93,18 +102,33 @@ a:visited {
 
 a:hover {
 	background-color: blue;
-	color: #fff
+	color: #fff;
 }
 
 a:hover:visited {
-	background-color: var(--text-color-url);
+	background-color: blue;
+	color: white;
 }
 
 .span.date {
-	color: #808080;
+	color: var(--color-primary-dark);
+}
+
+.span.header-code {
+	color: var(--color-primary-dark);
 }
 
 .header a:visited {
-	color: blue;
-	border-bottom: 1px solid purple
+	color: var(--text-color-accent);
+	border-bottom: none;
+}
+
+.header a {
+	border-bottom: none;
+}
+
+.header a:hover:visited {
+	color: white;
+	background-color: var(--color-accent);
+	border-bottom: none;
 }

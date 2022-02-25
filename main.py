@@ -45,8 +45,8 @@ def talks():
     return TalksPage(app_state).create()
 
 
-@app.route('/blog/<id>')
-def post(id):
+@app.route('/publications/<id>')
+def publication(id):
     return PublicationPage(id, app_state).create()
 
 
