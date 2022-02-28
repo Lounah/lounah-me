@@ -131,3 +131,12 @@ a:hover:visited {
 	background-color: var(--color-accent);
 	border-bottom: none;
 }
+
+@media only screen and (max-width: 1000px) {
+    body {
+        background-color: var(--color-primary);
+        color: var(--text-color-primary);
+        margin: auto;
+        width: 90%;
+    }
+}
