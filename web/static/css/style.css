@@ -42,8 +42,9 @@ img {
 body {
 	background-color: var(--color-primary);
 	color: var(--text-color-primary);
-    margin: auto;
-	width: 50%;
+    margin: 0 auto;
+    max-width: 60em;
+    padding: 0 10px;
 }
 
 .header {
@@ -130,13 +131,4 @@ a:hover:visited {
 	color: white;
 	background-color: var(--color-accent);
 	border-bottom: none;
-}
-
-@media only screen and (max-width: 1000px) {
-    body {
-        background-color: var(--color-primary);
-        color: var(--text-color-primary);
-        margin: auto;
-        width: 90%;
-    }
 }
