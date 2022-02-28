@@ -2,6 +2,7 @@
 {% block header %}
     <h1>lounah@me <a href="/">~</a> % <span class="span header-code">ls {{type.value.lower()}}</span></h1>
 {% endblock %}
+{% block title %}{{type.value}} – Lounah's blog{% endblock %}
 {% block content %}
     {% for publication in content %}
         {{ publication.content.overview() | safe }}

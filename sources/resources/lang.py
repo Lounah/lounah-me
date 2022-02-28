@@ -6,8 +6,11 @@ class Lang(Enum):
     EN = 'en'
 
     @staticmethod
+    def values():
+        return ['ru', 'en']
+
+    @staticmethod
     def best_match(languages: list[str]):
-        print(languages)
         if Lang.RU.value in languages:
             return Lang.RU
         elif Lang.EN.value in languages:
