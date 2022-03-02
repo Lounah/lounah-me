@@ -1,8 +1,8 @@
 :root {
-    --font-size-h1: 20px;
-    --font-size-h2: 18px;
-    --font-size-h3: 16px;
-    --font-size-h4: 14px;
+    --font-size-h1: 18px;
+    --font-size-h2: 16px;
+    --font-size-h3: 14px;
+    --font-size-h4: 12px;
 }
 
 .theme-light {
