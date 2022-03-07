@@ -72,23 +72,14 @@ body {
 	line-height: 1.8;
 }
 
-.publication-title {
-     width: auto;
-     display: flex;
-     flex-wrap: wrap;
-}
-
-.publication-title > * {
-    flex: 1 1 auto;
-	line-height: 0.2;
-}
-
 #read-more {
 	line-height: 0.2;
+	font-size: var(--font-size-h4);
 }
 
 .publication-date {
 	color: var(--color-primary-dark);
+	font-size: var(--font-size-h4);
 }
 
 .content p {
