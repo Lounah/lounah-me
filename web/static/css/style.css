@@ -72,6 +72,10 @@ body {
 	line-height: 1.8;
 }
 
+.content h3 {
+    line-height: 1.5;
+}
+
 #read-more {
 	line-height: 0.2;
 	font-size: var(--font-size-h4);
