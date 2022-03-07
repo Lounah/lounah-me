@@ -7,6 +7,6 @@
 {% block content %}
     {% for publication in content %}
         {{ publication.content.overview() | safe }}
-        <h3><a href="{{ publication.url() }}">{{strings['read_more']}} >> </a></h3>
+        <h4><a href="{{ publication.url() }}">{{strings['read_more']}} >> </a></h4>
     {% endfor %}
 {% endblock %}

@@ -44,12 +44,12 @@ body {
 	color: var(--text-color-primary);
     margin: 0 auto;
     max-width: 60em;
-    padding: 0 10px;
+    padding: 0 25px;
 }
 
 .header {
 	top: 0;
-	padding-top: 10px;
+	padding-top: 50px;
 	padding-bottom: 70px;
 }
 
@@ -70,6 +70,21 @@ body {
 .content h2 {
 	padding-top: 40px;
 	line-height: 1.8;
+}
+
+.publication-title {
+     width: auto;
+     display: flex;
+     flex-wrap: wrap;
+}
+
+.publication-title > * {
+    flex: 1 1 auto;
+	line-height: 0.2;
+}
+
+#publication-date {
+	color: var(--color-primary-dark);
 }
 
 .content p {
@@ -107,10 +122,6 @@ a:hover {
 a:hover:visited {
 	background-color: blue;
 	color: white;
-}
-
-.span.date {
-	color: var(--color-primary-dark);
 }
 
 #header-terminal-cmd {

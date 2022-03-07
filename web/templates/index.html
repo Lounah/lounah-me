@@ -7,7 +7,10 @@
     {% for group, publications in all_publications %}
         <h2>## {{ group.translated(strings) }}</h2>
         {% for publication in publications %}
-            <h3>- <a href="{{ publication.url() }}">{{ publication.title }}</a> <span class="span date">{{ publication.date.strftime("%Y-%m-%d") }}</span></h3>
+            <div class="publication-title">
+            <h3>- <a href="{{ publication.url() }}">{{ publication.title }}</a></h3>
+            <h4 id="publication-date">&nbsp;{{ publication.date.strftime("%Y-%m-%d") }}</h4>
+            </div>
         {% endfor %}
         <p>&nbsp;&nbsp;<a href="/{{ group.value.lower() }}">{{strings['show_more']}} >> </a></p>
     {% endfor %}
