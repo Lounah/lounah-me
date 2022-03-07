@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block header %}
-    <h1>lounah@me <a href="/">~</a> % <span class="span header-code">ls {{type.value.lower()}}</span></h1>
+    <h1>lounah@me <a href="/">~</a> %</h1>
+    <h1 id="header-terminal-cmd">&nbsp;ls {{type.value.lower()}}</h1>
 {% endblock %}
 {% block title %}{{type.value}} – Lounah's blog{% endblock %}
 {% block content %}

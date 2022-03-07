@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block header %}
-    <h1>lounah@me <a href="/{{publication.type.value.lower()}}">{{publication.type.value.lower()}}</a> % <span class="span header-code">cat {{publication.id}}.md</span></h1>
+    <h1>lounah@me <a href="/{{publication.type.value.lower()}}">{{publication.type.value.lower()}}</a> %</h1>
+    <h1 id="header-terminal-cmd">&nbsp;cat {{publication.id}}.md</h1>
 {% endblock %}
 {% block title %}{{ publication.title }}{% endblock %}
 {% block content %}

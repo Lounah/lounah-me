@@ -55,7 +55,6 @@ body {
 
 .header h1 {
 	float: left;
-	display: inline;
 }
 
 .header h2 {
@@ -114,8 +113,12 @@ a:hover:visited {
 	color: var(--color-primary-dark);
 }
 
-.span.header-code {
+#header-terminal-cmd {
 	color: var(--color-primary-dark);
+	max-width: 30%;
+	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .header a:visited {
