@@ -1,5 +1,4 @@
-from flask import Flask, url_for, request
-from werkzeug.utils import redirect
+from flask import Flask
 
 from sources.application_state import ApplicationState
 from sources.pages.main_page import MainPage

@@ -47,7 +47,18 @@ def index():
 def posts():
     theme = session.get('theme', 'theme-light')
     return render_template("posts.html", theme=theme, content=store.get_posts())
-</pre></code>
+</code></pre>
+
+
+<pre><code>
+fun compute() {
+    Thread {
+        val a = "2"
+        val b = "3"
+        println(a + b)
+    }.start()
+}
+</code></pre>
 
 
 Здесь можно видеть, что модуль app использует mosby-mvp, который тянет за собой support-библиотеки. 

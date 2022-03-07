@@ -28,8 +28,10 @@ function setTheme(theme) {
 
 function setLightTheme() {
     setTheme(LIGHT_THEME);
+    document.getElementById("code").setAttribute("href", "/css/code/github-light.css");
 }
 
 function setDarkTheme() {
     setTheme(DARK_THEME);
+    document.getElementById("code").setAttribute("href", "/css/code/github-dark.css");
 }
