@@ -83,6 +83,10 @@ body {
 	line-height: 0.2;
 }
 
+#read-more {
+	line-height: 0.2;
+}
+
 #publication-date {
 	color: var(--color-primary-dark);
 }
