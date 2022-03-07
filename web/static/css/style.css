@@ -87,7 +87,7 @@ body {
 	line-height: 0.2;
 }
 
-#publication-date {
+.publication-date {
 	color: var(--color-primary-dark);
 }
 
