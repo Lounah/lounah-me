@@ -151,6 +151,10 @@ a:hover:visited {
 	border-bottom: none;
 }
 
+.transparent-span {
+    color: var(--color-primary);
+}
+
 pre {
   margin: 0;
   padding: 0;
