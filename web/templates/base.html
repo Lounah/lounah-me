@@ -2,40 +2,39 @@
 
 <html lang="en" class="theme-light">
 
-<meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
-<meta name="viewport" content="width=640" />
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
+    <meta name="viewport" content="width=640" />
 
-<link id="code" rel="stylesheet" href="/css/code/github-light.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hack/0.8.1/hack.css"/>
-<link rel="stylesheet" href="/css/style.css">
+    <link id="code" rel="stylesheet" href="/css/code/github-light.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hack/0.8.1/hack.css"/>
+    <link rel="stylesheet" href="/css/style.css">
 
-<script type=text/javascript src="{{url_for('static', filename='js/index.js')}}"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
-<script>hljs.highlightAll();</script>
+    <script type=text/javascript src="{{url_for('static', filename='js/index.js')}}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
 
-<head>
-    <meta charset="UTF-8">
-    <title>{% block title %}{% endblock %}</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}{% endblock %}</title>
+    </head>
 
-<body>
+    <body>
+        <div class="header">
+            {% block header %}{% endblock %}
+            <h2><a role="button" onclick="setDarkTheme()">Dark</a> / <a role="button" onclick="setLightTheme()">Light</a></h2>
+        </div>
 
-<div class="header">
-    {% block header %}{% endblock %}
-    <h2><a role="button" onclick="setDarkTheme()">Dark</a> / <a role="button" onclick="setLightTheme()">Light</a></h2>
-</div>
+        <div class="content">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </body>
 
-<div class="content">
-    {% block content %}
-    {% endblock %}
-</div>
-
-</body>
-
-<div class="footer">
-    <p><a href="https://github.com/Lounah" target="_blank">Github</a> / <a href="https://t.me/lounvhx" target="_blank">Telegram</a> / <a href="https://twitter.com/lounvhx" target="_blank">Twitter</a></p>
-    <p>{{strings['switch_language']}} <a type="button" onclick="updateLanguage('{{strings['other_language_code']}}')">{{strings['other_language']}}</a>
-    </p>
-</div>
+    <div class="footer">
+        <a href="https://github.com/Lounah" target="_blank">Github</a> / <a href="https://t.me/lounvhx" target="_blank">Telegram</a> / <a href="https://twitter.com/lounvhx" target="_blank">Twitter</a>
+        <br>
+        <br>
+        {{strings['switch_language']}} <a type="button" onclick="updateLanguage('{{strings['other_language_code']}}')">{{strings['other_language']}}</a>
+    </div>
 
 </html>

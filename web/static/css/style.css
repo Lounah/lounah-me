@@ -3,6 +3,7 @@
     --font-size-h2: 18px;
     --font-size-h3: 16px;
     --font-size-h4: 14px;
+    --font-size-h5: 12px;
 }
 
 .theme-light {
@@ -32,6 +33,7 @@ h1 { font-size: var(--font-size-h1); }
 h2 { font-size: var(--font-size-h2); }
 h3 { font-size: var(--font-size-h3); }
 h4 { font-size: var(--font-size-h4); }
+h5 { font-size: var(--font-size-h5); }
 
 img {
 	margin: auto;
@@ -84,6 +86,7 @@ body {
 .publication-date {
 	color: var(--color-primary-dark);
 	font-size: var(--font-size-h4);
+	margin-left: 4px;
 }
 
 .content p {
@@ -94,11 +97,13 @@ body {
 }
 
 .footer {
-   left: 0;
    bottom: 0;
    margin-top: 250px;
-   width: 100%;
+   margin-bottom: 25px;
    text-align: center;
+   font-size: var(--font-size-h5);
+   color: var(--text-color-secondary);
+   line-height: 1.6;
 }
 
 a {
