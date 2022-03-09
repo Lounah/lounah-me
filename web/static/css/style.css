@@ -161,7 +161,7 @@ pre {
   margin 0 0;
   background-color: var(--color-primary);
   border: 1px solid #ccc;
-  overflow: none;
+  white-space: pre;
 }
 
 code[class*="language-"], pre[class*="language-"], pre code {
