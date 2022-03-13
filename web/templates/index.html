@@ -4,6 +4,7 @@
 {% endblock %}
 {% block title %}Lounah's blog{% endblock %}
 {% block content %}
+<iframe src="/dino.html" width="100%" height="200" frameBorder="0"></iframe>
     {% for group, publications in all_publications %}
         <h2>## {{ group.translated(strings) }}</h2>
         {% for publication in publications %}

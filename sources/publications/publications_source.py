@@ -37,7 +37,7 @@ class StaticPublicationSource(PublicationsSource):
     @staticmethod
     def _md_to_publication(publication_md) -> Publication:
         path = Path(publication_md)
-        content = PublicationContent(path.read_text())
+        content = PublicationContent(path.read_text(encoding='utf-8', errors='ignore'))
         return Publication(
             id=path.stem,
             title=content.title(),
