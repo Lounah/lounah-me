@@ -162,7 +162,7 @@ pre {
   background-color: var(--color-primary);
   border: 1px solid #ccc;
   white-space: pre;
-    -webkit-overflow-scrolling: touch;
+  -webkit-overflow-scrolling: touch;
 }
 
 code[class*="language-"], pre[class*="language-"], pre code {
