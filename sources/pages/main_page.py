@@ -11,7 +11,7 @@ class MainPage(WebPage):
     def __init__(self, state: ApplicationState):
         super().__init__("index.html", state)
 
-    def get_args(self) -> dict[str, Any]:
+    def args(self) -> dict[str, Any]:
         return {
             "all_publications": self._get_posts(),
             "mini_game": MiniGame.random().value

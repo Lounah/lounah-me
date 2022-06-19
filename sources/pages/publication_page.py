@@ -8,7 +8,7 @@ class PublicationPage(WebPage):
         super().__init__("publication.html", state)
         self.id = id
 
-    def get_args(self) -> dict[str, Any]:
+    def args(self) -> dict[str, Any]:
         return {"publication": self._get_publication_by_id()}
 
     def _get_publication_by_id(self):

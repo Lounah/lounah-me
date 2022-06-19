@@ -13,12 +13,12 @@ class WebPage:
         self._state = state
 
     @abc.abstractmethod
-    def get_args(self) -> dict[str, Any]:
+    def args(self) -> dict[str, Any]:
         pass
 
     def create(self):
         self._state.lang = self._get_language()
-        return render_template(self.html, strings=self._state.strings(), **self.get_args())
+        return render_template(self.html, strings=self._state.strings(), **self.args())
 
     @staticmethod
     def _get_language() -> Lang:

@@ -8,7 +8,7 @@ class PostsPage(WebPage):
     def __init__(self, state: ApplicationState):
         super().__init__("publications.html", state)
 
-    def get_args(self) -> dict[str, Any]:
+    def args(self) -> dict[str, Any]:
         return {
             "content": self._get_posts(),
             "type": PublicationType.POST
@@ -22,7 +22,7 @@ class PodcastsPage(WebPage):
     def __init__(self, state: ApplicationState):
         super().__init__("publications.html", state)
 
-    def get_args(self) -> dict[str, Any]:
+    def args(self) -> dict[str, Any]:
         return {
             "content": self._get_podcasts(),
             "type": PublicationType.PODCAST
@@ -36,7 +36,7 @@ class TalksPage(WebPage):
     def __init__(self, state: ApplicationState):
         super().__init__("publications.html", state)
 
-    def get_args(self) -> dict[str, Any]:
+    def args(self) -> dict[str, Any]:
         return {
             "content": self._get_talks(),
             "type": PublicationType.TALK
