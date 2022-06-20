@@ -21,7 +21,7 @@ publications = Publications({
     Lang.RU: StaticPublicationSource('web/static/publications/ru'),
     Lang.EN: StaticPublicationSource('web/static/publications/en')
 })
-app_state = ApplicationState(strings, publications, Lang.EN)
+app_state = ApplicationState(strings, publications, default_lang=Lang.RU)
 
 
 @app.route('/')

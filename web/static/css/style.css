@@ -16,6 +16,7 @@
 	--text-color-url: purple;
 	--text-color-accent: blue;
 	--text-color-secondary: #000;
+	--text-bg-color-code: #E8E8E8;
 }
 
 .theme-dark {
@@ -27,6 +28,7 @@
 	--text-color-secondary: #e7e7e7;
 	--text-color-url: #aaa;
 	--text-color-accent: #e7e7e7;
+    --text-bg-color-code: #6e7598;
 }
 
 h1 { font-size: var(--font-size-h1); }
@@ -159,6 +161,7 @@ pre {
   margin: 0;
   padding: 0;
   margin 0 0;
+  margin-bottom: 20px;
   background-color: var(--color-primary);
   border: 1px solid #ccc;
   white-space: pre;
@@ -180,6 +183,15 @@ code {
   tab-size: 4;
   -moz-tab-size: 4;
   -webkit-overflow-scrolling: touch;
+}
+
+code-inline {
+  font-family: Consolas, Monaco, monospace;
+  font-size: 10pt;
+  padding: 0.1em;
+  tab-size: 4;
+  background-color: var(--text-bg-color-code);
+  -moz-tab-size: 4;
 }
 
 pre code.hljs {
