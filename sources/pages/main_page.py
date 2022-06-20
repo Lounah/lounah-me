@@ -1,5 +1,4 @@
 import itertools
-from random import randrange
 from typing import Any
 
 from sources.application_state import ApplicationState

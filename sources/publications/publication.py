@@ -14,6 +14,14 @@ class PublicationType(Enum):
     def translated(self, strings: dict[str, str]) -> str:
         return strings[self.value.lower()]
 
+    def order(self):
+        if self == PublicationType.POST:
+            return 0
+        elif self == PublicationType.TALK:
+            return 1
+        elif self == PublicationType.PODCAST:
+            return 2
+
     def __str__(self):
         return str(self.value)
 

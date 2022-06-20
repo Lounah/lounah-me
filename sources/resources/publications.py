@@ -9,4 +9,4 @@ class Publications(ResourcesManager):
         self._sources = sources
 
     def get(self, lang: Lang) -> list[Publication]:
-        return self._sources[lang].resolve()
+        return sorted(self._sources[lang].resolve(), key=lambda p: p.type.order())
