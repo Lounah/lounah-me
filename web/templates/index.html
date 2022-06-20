@@ -4,7 +4,7 @@
 {% endblock %}
 {% block title %}Lounah's blog{% endblock %}
 {% block content %}
-    <iframe src="{{ mini_game }}" width="100%" frameborder="0" height="200px"></iframe>
+<!--    <iframe src="{{ mini_game }}" width="100%" frameborder="0" height="200px"></iframe>-->
     {% for group, publications in all_publications %}
         <h2>## {{ group.translated(strings) }}</h2>
         {% for publication in publications %}
