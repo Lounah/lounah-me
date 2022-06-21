@@ -3,7 +3,7 @@
     <h1>lounah@me <a href="/">~</a> %</h1>
     <h1 id="header-terminal-cmd">&nbsp;ls {{type.value.lower()}}</h1>
 {% endblock %}
-{% block title %}{{type.value}} – Lounah's blog{% endblock %}
+{% block title %}{{type.value}} – Blog @ lounah.me{% endblock %}
 {% block content %}
     {% for publication in content %}
         {{ publication.content.overview() | safe }}
