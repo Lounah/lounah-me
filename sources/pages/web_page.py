@@ -22,4 +22,8 @@ class WebPage:
 
     @staticmethod
     def _get_language() -> Lang:
-        return Lang.best_match(request.cookies.get('lang', request.accept_languages))
+        """
+        Temporally use 'ru' lang as project's default.
+        Will be fixed as soon as I will write more english-based content.
+        """
+        return Lang.best_match(request.cookies.get('lang', default=['ru']))
