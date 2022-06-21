@@ -3,7 +3,7 @@ dark_theme = "Dark"
 light_theme = "Light"
 
 [ru]
-posts = "Посты"
+publications = "Публикации"
 podcasts = "Подкасты"
 talks = "Выступления"
 read_more = "Читать больше"
@@ -13,7 +13,7 @@ other_language = "@English"
 other_language_code = "en"
 
 [en]
-posts = "Posts"
+publications = "Publications"
 podcasts = "Podcasts"
 talks = "Talks"
 read_more = "Read more"

@@ -7,7 +7,7 @@ import markdown as markdown
 
 
 class PublicationType(Enum):
-    POST = 'Posts'
+    PUBLICATION = 'Publications'
     PODCAST = 'Podcasts'
     TALK = 'Talks'
 
@@ -15,7 +15,7 @@ class PublicationType(Enum):
         return strings[self.value.lower()]
 
     def order(self):
-        if self == PublicationType.POST:
+        if self == PublicationType.PUBLICATION:
             return 0
         elif self == PublicationType.TALK:
             return 1

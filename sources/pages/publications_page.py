@@ -11,11 +11,11 @@ class PostsPage(WebPage):
     def args(self) -> dict[str, Any]:
         return {
             "content": self._get_posts(),
-            "type": PublicationType.POST
+            "type": PublicationType.PUBLICATION
         }
 
     def _get_posts(self):
-        return list(filter(lambda publication: publication.type == PublicationType.POST, self._state.publications()))
+        return list(filter(lambda publication: publication.type == PublicationType.PUBLICATION, self._state.publications()))
 
 
 class PodcastsPage(WebPage):

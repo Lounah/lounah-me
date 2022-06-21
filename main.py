@@ -18,8 +18,8 @@ app = Flask(
 
 strings = Strings('web/static/resources/strings.toml')
 publications = Publications({
-    Lang.RU: StaticPublicationSource('web/static/publications/ru'),
-    Lang.EN: StaticPublicationSource('web/static/publications/en')
+    Lang.RU: StaticPublicationSource('web/static/content/ru'),
+    Lang.EN: StaticPublicationSource('web/static/content/en')
 })
 app_state = ApplicationState(strings, publications, default_lang=Lang.RU)
 
@@ -29,7 +29,7 @@ def index():
     return MainPage(app_state).create()
 
 
-@app.route('/posts')
+@app.route('/publications')
 def posts():
     return PostsPage(app_state).create()
 
