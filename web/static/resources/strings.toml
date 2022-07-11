@@ -1,6 +1,7 @@
 [universal]
 dark_theme = "Dark"
 light_theme = "Light"
+resume = "Resume"
 
 [ru]
 publications = "Публикации"

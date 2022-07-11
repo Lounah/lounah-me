@@ -10,6 +10,7 @@ class PublicationType(Enum):
     PUBLICATION = 'Publications'
     PODCAST = 'Podcasts'
     TALK = 'Talks'
+    RESUME = 'Resume'
 
     def translated(self, strings: dict[str, str]) -> str:
         return strings[self.value.lower()]
@@ -21,6 +22,8 @@ class PublicationType(Enum):
             return 1
         elif self == PublicationType.PODCAST:
             return 2
+        elif self == PublicationType.RESUME:
+            return 3
 
     def __str__(self):
         return str(self.value)

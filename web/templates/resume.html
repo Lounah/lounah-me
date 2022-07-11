@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block header %}
+<h1>lounah@<a href="/resume">me</a> <a href="/">~</a> %</h1>
+    <h1 id="header-terminal-cmd">&nbsp;cat resume.md</h1>
+{% endblock %}
+{% block title %}{{ CV }}{% endblock %}
+{% block content %}
+    {{ publication.content.html | safe }}
+{% endblock %}

@@ -1,6 +1,7 @@
 from flask import Flask
 
 from sources.application_state import ApplicationState
+from sources.pages.resume_page import ResumePage
 from sources.pages.main_page import MainPage
 from sources.pages.publication_page import PublicationPage
 from sources.pages.publications_page import PostsPage, PodcastsPage, TalksPage
@@ -47,6 +48,11 @@ def talks():
 @app.route('/publications/<id>')
 def publication(id):
     return PublicationPage(id, app_state).create()
+
+
+@app.route('/resume')
+def resume():
+    return ResumePage(app_state).create()
 
 
 if __name__ == "__main__":

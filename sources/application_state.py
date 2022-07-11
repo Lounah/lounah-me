@@ -1,4 +1,4 @@
-from sources.publications.publication import Publication
+from sources.publications.publication import Publication, PublicationType
 from sources.resources.lang import Lang
 from sources.resources.publications import Publications
 from sources.resources.strings import Strings
@@ -15,3 +15,6 @@ class ApplicationState:
 
     def publications(self) -> list[Publication]:
         return self._publications.get(self.lang)
+
+    def resume(self) -> Publication:
+        return list(filter(lambda p: p.type == PublicationType.RESUME, self.publications()))[0]
