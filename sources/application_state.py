@@ -14,7 +14,7 @@ class ApplicationState:
         return self._strings.get(self.lang)
 
     def publications(self) -> list[Publication]:
-        return self._publications.get(self.lang)
+        return list(filter(lambda p: p.type != PublicationType.RESUME, self._publications.get(self.lang)))
 
     def resume(self) -> Publication:
-        return list(filter(lambda p: p.type == PublicationType.RESUME, self.publications()))[0]
+        return list(filter(lambda p: p.type == PublicationType.RESUME, self._publications.get(self.lang)))[0]
