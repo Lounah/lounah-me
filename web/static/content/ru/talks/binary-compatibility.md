@@ -7,7 +7,3 @@
 Кстати, он отчасти доступен на моем [github](https://github.com/lounah/binary-compatibility-reporter).
 
 [overview]: <>
-
-<iframe width="640" height="480" 
-    src="https://www.youtube.com/embed/kZDOfgI4YRY">
-</iframe>
