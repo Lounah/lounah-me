@@ -14,3 +14,7 @@
 парсим <code-inline>git diff</code-inline> и понимаем, какие именно UI-тесты нам нужно будет запустить.
 
 [overview]: <>
+
+<iframe width="640" height="480" 
+    src="https://www.youtube.com/embed/3FCeOL8kgZg">
+</iframe>
